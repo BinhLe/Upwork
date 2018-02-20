@@ -1,3 +1,34 @@
+%GDD Clustering Algorithm
+
+%--------------------------------------------------------------------------
+%Author:  Emre G�ng�r, Ahmet �zmen
+% Please Cite as (if you use in you study or work)
+%       G�ng�r, Emre, and Ahmet �zmen. "Distance and density based 
+%       clustering algorithm using Gaussian kernel." Expert Systems with 
+%       Applications 69(2017): 10-20.
+%
+% Please Note:
+%       Standard error of the mean is used in variables DevD,GPD_CPU,
+%       DPD_CPU, which is sqrt(1/N)*standard deviation. It is used for  
+%       estimation of the standard deviation of a sampling distribution.
+%       Reason for that to correctly estimate relation between samples and
+%       region that samples are resides.
+%       
+%       Also SIP deviation calculations are computed using 
+%       std=sqrt((1/N)*(sum(xi^2)-(sum(xi)^2))/N);
+%       for performance and coding ease. Other deviations can be calculated
+%       this way for performance in loops instead of std() function. 
+%   
+%       Code is not optimized - And can contain errors please help us
+%       if you see any errors by sending e-mail to us. Thanks in advance :)
+%       
+% Contact Info:
+%       Emre G�ng�r: emregungor84@hotmail.com
+%       Ahmet �zmen: ozmen@sakarya.edu.tr
+%--------------------------------------------------------------------------
+
+
+%% GDD Algorithm
 function [CLUSTERS,centroids]=func_GDD(DataSet)
 %  tic
  % CLUSTERS=[];
@@ -389,4 +420,7 @@ end
 CLUSTERS=CLUSTERSnew;
 
 end
+    
+    
+    
     
